@@ -1,0 +1,155 @@
+/*so guys,
+ we had used inline css in h1 
+   which has very high specificity
+
+   see the 1_index.html
+
+   internal css are used in the head tag;
+   
+When we are using external css then we ahve to link this css file to html file then it willl work
+
+between internal and external css the priority is set as the one which is written last in the html code
+if link is written after style in head then the link css will be applied to the file
+
+similarly if two internal css is written then the last one is reflected;
+
+*/
+h1{
+    color: #ff3368;
+}
+h3{
+    color: green;
+}
+/* 
+now heading to indexCss.html for the others
+
+here h1 and h3 are selector : the thing where we are applyong the css property 
+    color is the property of the selector
+    and the greeen is the value of the property;
+Basically there are 3 types of selector : 
+    * Above one is element selector
+    * 2nd is id selector - { this is used to apply css particular element of the html that had some id }
+    * 3rd one is class selector -{ if we want some objects have same property , whether they are of same tags or not 
+        then we use class selector . all the tags having same class reflect this propwrty
+        like beliw heading, section and para both have same class
+
+    <section>
+        <button class = "btn">
+            Subscribe here guys!..
+        </button>
+    </section>
+
+    here we are giving the button a class named 'btn'.
+    .btn is a class selector for this class
+
+    whole block {} is called declaration  
+    
+    for id operator we use:
+    #btn as the id selector
+
+*/
+/*
+ So basically there is only one id . and that id is used for the single time n the whole html file
+ but (opposite) one tag can have multiple class and a class can be for multiple taf
+
+ same property in different class of  same HTML element  . then the class written later will be reflected
+ i.e. if the selector is same for the same attribute then the last one is reflected 
+        else if the selector is different then the priority order is different : 
+                selector: id > class > elemental
+
+*/
+.btn{   
+    background-color: rgb(183, 170, 194);
+    font-weight: bold;
+}
+#h{
+    font-size: 10px;
+    /* background-color: #003368; */
+}
+.underline{
+    background-color: rgb(225, 250, 225);
+    text-decoration: underline overline ;  
+}
+
+#h{
+    font-size: 50px;
+    /* background-color: #ff3368; */
+}
+
+.para{
+    color: blue;
+}
+
+#btn{
+    background-color: azure;
+}
+/* if we wanted to ahange the property on hovering the text of the anchor tag then we can use anchor tag */
+
+#link{
+    color: rgb(164, 12, 17);
+    background-color: rgb(100, 221, 221);
+}
+/*  on hovering it will become opposite 
+we can do it by two ways  */
+
+#link:hover{
+    color: rgb(100, 221, 221);
+    background-color: rgb(164, 12, 17);
+    font-size:xx-large;
+}
+/* a:hover{
+    color: rgb(100, 221, 221);
+    background-color: rgb(49, 3, 57);
+} */
+
+h1:hover{
+    color: black;
+    background-color: aquamarine;
+    
+}
+
+/*
+            Colors in Css
+-> RGB
+. rgb(red,green,blue)  b/w 0-255
+. white : rgb(255,255,255)
+. Black : rgb(0,0,0)
+. Red : rgb(255,0,0)
+. green : rgb(0,255,0)
+. blue : rgb(0,0,255)
+ 
+->RGBA
+. here a refers to the alpha parameter which is between 0.0(full transparency) to 1.0 (not tarnsparent)
+. rgba(255,99,71,0.5)
+. color: transparent; this also makes it transparent
+
+-> HEX
+. #rrggbb
+. hexadecimal values between 00 to ff
+. Red : #ff0000
+. white : #ffffff
+. Black : #000000 
+
+-> HSL
+- hsl(hue, saturation, lightness)
+- hue, saturation, and lightness (HSL)
+- Hue is a degree on the color wheel from 0 to 360. 0 is red, 120 is green, and 240 is blue.
+- Saturation is a percentage value, 0% means a shade of gray, and 100% is the full color.
+- Lightness is also a percentage, 0% is black, 50% is neither light or dark, 100% is white
+- RED: hsl(0, 100%, 50%)
+
+ -> HSLA 
+. same as hsl but here a measn alpha for transparency   0.0 for full transparent and 1.0 means not transparent 
+
+
+-> to match the colour of child with the parent : 
+i can use below in child as colour of parent is already speccified : 
+color:currentColor;  
+it has the same colour as the parent;
+*/
+/* 
+if we use #111, #222 this specify the grey color and the magniude specifies the darkness of grey 
+we can use #000 for black and #fff for white
+*/
+
+
