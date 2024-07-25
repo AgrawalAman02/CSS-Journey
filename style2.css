@@ -1,0 +1,44 @@
+/* #bg{
+    background-color: rgb(166, 237, 215);
+} */
+
+body{
+    background-color: rgb(226, 206, 206);
+}
+
+#bg{
+    color: #f4f1f1;
+    background-image: url(https://wallpaperaccess.com/full/1567666.png);
+    /* since if the image is of small size then it get repeated so that it can fill the webpage
+    but we can stop them to repeat the background image */
+    background-repeat: no-repeat;  /* this will not repeat the image . it inly show the image until the size of the image
+                                    but of we want to repaeat the image in only y direction then we can use repeat-y */
+    /* background-repeat: repeat-y; 
+     if we dont write anything then it will take the value as repeat means it will repeat in both x and y direction
+    */
+
+    /* if we want to set the position of the bg image then we can use the position property where value are 'position in horizontal direction(x axis)   position in vertical direction(y-axis)' */
+
+    background-position: right center;  
+    /* can be center center */
+
+    background-position: 50px 100px;   
+    background-position: 5% 10%;  
+    background-size: 1800px 3000px;   
+    /* so it stretch the image but not repeat it...  if we do 100% then it will fill full */
+
+    /* sometime we see that background is fixed but the text scroll . 
+    we can use attachment for that : by default it is scroll so background scroll along with the text
+    but if we make it fixed then it will fix the background */
+;
+    background-attachment: fixed;
+
+
+}
+/* 
+Absolute Lengths	Relative Lengths 
+
+Pixels (px)	        em
+Inches (in)	        Root em (rem)
+Points (pt)	        Percentage (%)
+*/
