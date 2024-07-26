@@ -1,0 +1,87 @@
+/** 
+*!                            UNITS IN CSS
+
+**Absolute Lengths: The absolute length units are fixed and a length expressed in any of these will appear as exactly that size.
+
+**Relative Lengths: Relative length units specify a length relative to another length property. 
+    Relative length units scale better between different rendering mediums.
+
+**Pixels (px): px is an absolute unit of measurement in CSS, representing the smallest unit of screen space. 
+    It provides a fixed and consistent size on all devices and screens.
+
+/*?Percentages (%): Percentages are relative units based on the parent element’s size or the containing block.
+    Widely used in creating responsive layouts.
+*   Example: width: 50%; sets an element’s width to 50% of its parent's width.
+
+**Em (em): em is a relative unit that is calculated based on the font size of the parent element. 
+    When you set an element’s size in em, it’s relative to the font size of its nearest parent with a specified font size.
+
+/*? Root Em (rem): rem is also a relative unit like em, but it's based on the font size of the root (html) element.
+--------Using rem ensures that the size is consistent throughout the entire document, making it especially useful for responsive design. */
+
+
+/* TODO: (checking different types of comments)    
+*/
+
+h1{
+    font-size: 54px;
+    color: purple;
+}
+p{
+    font-size: 36px;
+}
+li{
+    font-size: 44px;
+}
+/*? for percentage 100% = 16px */
+/* 1px = 6.25% */
+
+h2{
+    font-size: 200%;
+}
+
+/*? for 1em = 16px  */
+/* so we can say em is a very big unit  */
+
+h1{
+    font-size: 5em;   /**its like 80 px which is very big*/
+}
+/** but foe em if we give size to parent of li -> ul-> div , then  */
+/* lets give li some size in em  */
+li{
+    font-size: 5em;  /* so this has size of 5 * 16 = 80 px*/
+}
+
+.parent{
+    font-size: 10px;
+}
+/*! now u see the size of the li got changes i.e. it got small 
+    i.e. now 5 em = 5 *10 = 50 px  
+    so li is relative to parent 
+    em is relative measurer
+    if parent is 10 px then li is 5 times of that  */
+
+
+/*? for 1 rem = we can specify the font size of our will 
+    we need 1 rem = 10px , it makes our life easy  as in other case for 1 px we have uneven data 
+            but in this equation we can have easy way ro handle px  */
+
+    /* we can direcly access html  tag as it is the root of the html file  */
+html{
+    font-size: 10px;
+}
+h1{
+    font-size: 8.4rem;  
+    /* gives 84 px  */
+}
+/* now if we change the  size of the parent div then  even it has no effect on li as we ahve given it rem size */
+li{
+    font-size: 7rem;
+}
+.parent{
+    font-size: 100px;
+}
+/* 
+use of rem is that on only changing the size in html tag we can change the size of all doc..
+if is beneficial when we use different devices . then we need to change only size in one place 
+*/
