@@ -1,0 +1,119 @@
+
+/* 
+?TEXT PROPERTIES IN CSS
+
+Text Alignment - The 'text-align' property controls the horizontal alignment of text within an element's box.
+Common values are 'left', 'center', 'right', and 'justify'.
+
+Text Decoration - The 'text-decoration' property allows you to add decorations like underlines, overlines, or line-through to text.
+
+- text-decoration-line
+  - The 'text-decoration-line' property specifies which type of line should be used as decoration for text, such as underline, overline, line-through, or none.
+
+- text-decoration-color
+  - The 'text-decoration-color' property sets the color of the text decoration lines, like underlines or overlines.
+
+- text-decoration-style
+  - The ‘text-decoration-style’ property is used to set the style of the decoration line.
+
+text-decoration-thickness
+ - Specifies the thickness of the text decoration line
+
+text-decoration
+
+textTransform: The text-transform property allows you to control the capitalization of text.
+   Values include uppercase (converts text to all uppercase), lowercase (converts text to all lowercase),
+   capitalize (capitalizes the first letter of each word).
+
+? Text Spacing in CSS
+________________________________
+/* letter-spacing Property: The letter-spacing property controls the spacing between characters in a text. 
+- It can be set to positive values to increase spacing or negative values to decrease spacing.
+
+/* word-spacing Property: The word-spacing property controls the spacing between words in a text. 
+- It can be set to positive values to increase word spacing or negative values to decrease it.
+
+/* The line-height property is used to specify the space between lines: 
+
+/* white-space is used to control how white space within an element is handled
+
+
+!    TEXT Shadow property
+the text- shadow property allows you to add a shadow effect to text characters
+--it takes three values : horizontal shadow offset ,  vertical shadow offset , and the shadow color  (look below)
+
+*/
+
+body{
+    background-color: hsl(0, 0%, 94%);
+    display: grid;
+    place-items: center;
+    font-family: "Urbanist"; /* for this we can import as well as link the url in the hmml file , so here we ARE LINKING THE URL in the html file*/
+}
+.hero-section{
+    width: 50%;
+}
+h1{
+    font-size: 54px;
+    font-weight: 900;
+    /* text properties start here  */
+    text-align: left;  
+    /* justify use the full space available */
+    text-decoration-line: underline;
+    text-decoration-color: rgb(252, 112, 5);
+    text-decoration-thickness: 6px;
+    text-decoration-style: dotted;
+    /* text-decoration-style:wavy; */
+    text-transform:capitalize;    
+    /* it capitslise the first letter of each one  */
+
+
+    /* text-shadow : 2px 2px 2px blue*/
+            /* offset x    offset y   Blur-radius    Color */
+/* first one tell the length of the shadow in x dir , second tell in y-dir
+third tell how much blur and 4th tell the colour of the shadow */
+
+
+    text-shadow: 2px 2px 5px rgb(239, 84, 0,2.5);
+}
+
+a,p{
+    font-size: 20px;
+    font-weight: 400;
+    /* text properties start here  */
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    line-height: 1.5;  
+    /* means 1.5 times of the font size of the para  */
+    /* white-space: nowrap;  /*it makes the whole para to aling in one line if it is no wrap */ 
+
+
+}
+
+a{
+    text-decoration:none;
+    color: rgb(255, 89, 0);
+
+}
+
+/* 
+____________________________________
+Interview Questions 
+____________________________________
+
+? 1. Hpw can u comtrol the spacing betweem the lines of the text 
+THe line height property can be ised to control the spacing between the lines of the text . 
+It can be reset to a secific unit like px pr a relative value like 1.5 , which , multiplies the 
+font size
+
+? 2. bow can u create a drop cabs (initial letter styling ) in css?
+using the ::first-letter pseudo-element in css 
+*/
+
+
+p::first-letter{   /* p: is a class selector/pseudo-class   but p:: is a psuodo element ::first-element selects the first elemetns of the p */
+    text-transform: capitalize;  /*it is already capitalize*/
+    font-size: xx-large;
+    color: rgb(255, 77, 0);
+    font-weight: 600;
+}
