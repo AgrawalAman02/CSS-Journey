@@ -1,0 +1,106 @@
+/* 
+
+BOX MODEL IN CSS (BOX SIZING)
+------------------------------------
+
+The CSS Box Model consists of four main components:
+
+1. Content: This is the innermost part of the element, 
+    which holds the actual content such as text images or other HTML elements
+2. Padding: Padding is space between content and element's border 
+    It provides internal spacing within element
+3. Border: The border surrounds padding and content creating visible boundary around an element 
+    It can have thickness style and color
+4. Margin: The margin is space outside elements border 
+    It separates elements from other elements on page controls spacing between them
+
+
+? very important
+
+/* CSS box-sizing is a property that controls how the total width and height of an element are calculated, 
+    including its content, padding, and border. It has two possible values: content-box (default) and border-box */
+
+/** box-sizing: content-box 
+    In the default content-box value, an element's width and height are calculated based on its content area. 
+    Padding and border are added to the specified width and height.
+    This means that if you set the width of an element to 100 pixels, 
+    and then add 10 pixels of padding and a 2-pixel border, 
+    the element's total width will be 100 + 10 + 10 + 2 + 2 = 124 pixels.
+
+/** box-sizing: border-box 
+    When this property is set to border-box, the width and height of the element include the padding and border. 
+    This means that if you set the width of an element to 100 pixels, and 
+    then add 10 pixels of padding and a 2-pixel border,
+    the content area will be adjusted to fit within  hte specified 100-px width , nd th padding and border are contained within that 
+
+*/
+
+*{  /*univesal operator anything we write will appled everywhere*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* these things remove the horizontal slidebar  */
+}
+html {
+    font-family: Urbanist;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+   background-color: hsl(0, 0%, 92%);
+   display: grid;
+   place-items: center;
+}
+
+#main-heading{
+    padding: 40px 0;
+    font-weight: bold;
+    font-size: 48px;
+    color: #031721;
+    text-align: center;
+    text-decoration-line:overline underline;
+    text-decoration-color: #031721;
+}
+p {
+    line-height: 1.6;
+    letter-spacing: 1px;
+    font-size: 16px;
+}
+
+.section-one{
+    background-color: #0f2c59;
+    color: #fff;
+    border: 20px solid #337ccf;
+    padding: 50px;
+    width: 800px;
+/* on inspect we see the the size of the box is not 800px but  we want that
+it actually become sum of content , padding , border, margin 
+on using box sizing it will become as that  size  */
+/* box-sizing: border-box; */
+/* but on using this we got a horizontal slidebar in the website which is bad so we use this box sizing in the top * (universal operater) */
+
+}
+
+/* 
+** NOTES + TIPS
+--------------------
+When you set the width and height properties of an element with CSS, you just set the width and height of the content area. 
+    To calculate the full size of an element, you must also add padding, borders and margins.
+
+Default behavior -> width = 800: 50 * 20 * 20 = 150px x 150px
+
+Default behavior -> height = 500: 50 + 50 + 20 + 100px x 100px
+
+** INTERVIEW QUESTIONS
+-------------------------
+1.? : Explain what the CSS Box Model is and its components.
+
+
+2.? : What is the purpose of the box-sizing property in CSS? 
+    The box-sizing property controls how the total width and height of an element are calculated.
+         Two values it can take are content-box (default) and border-box. 
+         content-box calculates the total size including only content area excluding padding and border 
+         while border-box calculates total size including all.
+
+*/
