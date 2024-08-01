@@ -1,0 +1,55 @@
+/**
+ * RADIAL GRADIENTS
+ **/
+
+/**
+ * The radial-gradient() function sets a radial gradient as the background image.
+ * A radial gradient is defined by its center.
+ * To create a radial gradient you must define at least two color stops.
+ */
+
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+section{
+    width: 100%;
+    height: 100vh;
+    background-image: radial-gradient(red,orange, yellow,green, blue,indigo,purple);
+    /* by default it is ellipse , u can add as much colour  u want  */
+    background-image: radial-gradient(circle,red,orange, yellow,green, blue,indigo,purple);
+    /* we can also apply percent to this i.e. how  much we want any color */
+
+    /* background-image: radial-gradient(circle,red 20%,orange 20%, yellow 50%,green 30%, blue 10%,indigo,purple); */
+
+    background-image: repeating-radial-gradient(circle,red, yellow,green 50px);
+    /* no need to give comma for repeating gradient after the colors */
+
+    background: radial-gradient(
+    circle at center,
+    #9CECFB 0%,
+    #65C7F7 40%,
+    #0052D4 75%,
+    #2980b9 100%);
+    
+}
+/**
+** Interview Question
+**
+*/
+
+/*
+? 1: create a repeating radial gradient in CSS?
+* background-image: repeating-radial-gradient(#FF5733, #ffc300, #ABDF8E);
+*/
+
+/*
+? 2: Create a CSS-only radial gradient that creates a circular pattern of three distinct colors with smooth transitions between them.
+* background: radial-gradient(
+circle at center,
+#FF5733  0%,
+#ffc300 20%,
+#ABDF8E 40%,
+#2980b9 100%);
+*/
