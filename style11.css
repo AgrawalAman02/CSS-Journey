@@ -1,0 +1,56 @@
+/* 
+/* box shadow 
+box-shadow: 0 0 40px 60px #ffb000;
+/* horizontal offsset , vertical offset , blur , width, color */
+
+ */
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+html{
+    font-family: "Urbanist";
+}
+body{
+    width : 100%;
+    height: 100vh;
+    background-color:#B5FFFC;
+    background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
+    display: grid;
+    place-items: center;
+    
+}
+.shadow{
+    width : 300px;
+    height : 300px;
+    padding: 40px;
+    background-color:rgb(174,68,90) ;
+    border-radius: 50%;
+
+/* box shadow */
+box-shadow: 0 0 40px 60px #ffb000;
+/* horizontal offsset , vertical offset , blur , width, color */
+
+}
+/* drop shadow */
+/* if we post an image(even transparent) then box shadow will give shadow around its boxes 
+but if we use drop shadow then it will give shadow around the edges of the images . so 
+we use drop shadow for that 
+    only four parameter
+
+    x- offset / y offset/ blur-radius / color        
+    no need to give the width of the shadow
+
+ you can checkout the pixcap for awesome images
+*/
+img{
+    /* box-shadow: 10px 10px 0 50px blue;
+     */
+    /* to use drop shadow , we shoud use filter property */
+    filter: drop-shadow(10px 10px 20px rgb(255, 5, 30));
+}
+
+
+
