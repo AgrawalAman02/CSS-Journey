@@ -1,0 +1,122 @@
+/* CSS COMBINATORS */
+/** ------------------------- **/
+
+/** CSS combinators are used to define relationships between different elements in your HTML document.
+/** They allow you to target elements based on their position and hierarchy within the document structure. */
+
+/* Descendant Selector (Space): Selects an element that is a descendant of another element. */
+
+/* Child Selector (>): Selects an element that is a direct child of another element. */
+
+/* Adjacent Sibling Selector (+): Selects an element that is immediately preceded by another element. */
+
+/* General Sibling Selector (~): Selects all elements that are siblings of another element and share the same parent. */
+
+/* Universal Selector (*): Selects all elements. */
+
+
+
+/* *{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Urbanist";
+} */
+body{
+    background-color: #080a0c;
+    color: azure;
+    height: 100vh;
+}
+.container{
+    height: 100vh;
+    max-width: 1320px;
+    padding: 64px 0;
+    margin: 0 auto;
+    display: grid;
+    align-items: center;
+    color: rgb(4, 55, 29);
+}
+
+.grid{
+    display: grid;
+    align-items: center;
+    gap: 6.4rem;
+
+}
+.grid-two-column{
+    grid-template-columns: repeat(2,1fr);
+
+}
+.hero-content h1{
+    text-align: left;
+    font-size: 54px;
+}
+.hero-content p{
+    font-size: 18px;
+    letter-spacing: 1px;
+    margin: 2rem 0 4rem 0;
+
+}
+img{
+    width: 100%;
+    height: auto;
+}
+
+.hero-content a:link{
+    background-color: white;
+    display: inline-block;
+    padding: 10px 32px;
+    text-transform: capitalize;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 24px;
+    font-weight: bold;
+
+}
+
+.content-1,.content-2{
+    text-align: center;
+    text-transform: capitalize;
+
+}
+
+li{
+    list-style: none;
+    font-size: 48px;
+
+}
+
+/** ------------------------------------------  */
+ul p{
+    font-weight: bold;
+    color: red;
+}
+
+
+.content-1 ul li{
+    color: green;
+    /* color of all the li(all means child, grandchild and all) inside the ul become green */
+}
+/* lets chamge the colour of only its child */
+.content-1 ul>li{
+    color:  yellow;
+}
+/* this one change the color of all li under ul . ie it all changed the color of the deep nested */
+/* lets tacle this */
+.content-1>ul>li{
+    color: blue;
+}
+/* this changed the color of the li under ul which also just under the content 1 */
+
+
+/* if we want to changer the  color of the 1st sbling of any eleemet then we use +  */
+/* .content-1 ul p+li{
+    color: pink;
+} */
+
+/* if we want not to change only one sibling but to all the sibling then wew use ~  */
+/* .content-1 ul p~li{
+    color: purple;
+} */
+
+
