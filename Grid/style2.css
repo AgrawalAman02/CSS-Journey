@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+}
+
+.container{
+    background-color: rgb(72, 68, 68);
+    width: 100%;
+    height: 100%;
+    display: grid;
+    padding: 4rem;
+    grid-template-rows: repeat(4,200px);
+    grid-template-columns: repeat(3,300px);
+    gap: 0.4rem;
+    border: 2px dashed white;
+
+    justify-items: center;   /* horizontal*/
+    align-items: center;    /* vertical axis */
+    place-items: center;
+}
+
+.item{
+    height: 100px;
+    width: 100px;
+    border: 2px solid black;
+    background-color: rgb(148, 211, 190);
+    color: rgb(70, 12, 12);
+    justify-self: end;   /* horizontal axis */
+    align-self: center;   /* vertical axis */
+
+    /* place-self : center   shorthand for the both */  
+}
